@@ -1,5 +1,11 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    const diff = target - array[i];
+    if (array.indexOf(diff, i+1) !== -1) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /* 
